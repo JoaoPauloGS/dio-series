@@ -7,4 +7,3 @@ Pequeno sistema de cadastro de series usando terminal em dotnet core
 
 * Usar uma separação mais clara da view
 * Usar gravação em arquivo JSON
-
