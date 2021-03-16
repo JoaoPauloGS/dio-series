@@ -9,10 +9,10 @@ namespace DioSeries.Entities
 {
     public class Serie : Entity
     {
-        public Genero Genero { get; private set; }
-        public string Titulo { get; private set; }
-        public string Descricao { get; private set; }
-        public int Ano { get; private set; }
+        public Genero Genero { get; set; }
+        public string Titulo { get; set; }
+        public string Descricao { get; set; }
+        public int Ano { get; set; }
 
         public Serie(Guid id) : base(id)
         {
