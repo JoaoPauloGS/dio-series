@@ -9,8 +9,8 @@ namespace DioSeries.Interfaces
 {
     public interface IRepository<T> where T : Entity
     {
-        Task<ICollection<T>> List();
-        Task<T> Get(Guid id);
+        ICollection<T> List();
+        T Get(Guid id);
         Task Insert(T entity);
         Task Delete(Guid id);
         Task Update(Guid id, T entity);

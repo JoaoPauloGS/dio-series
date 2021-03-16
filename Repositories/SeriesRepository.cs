@@ -31,9 +31,9 @@ namespace DioSeries.Repositories
             await Commit();
         }
 
-        public async Task<Serie> Get(Guid id)
+        public Serie Get(Guid id)
         {
-            throw new NotImplementedException();
+            return _serieslist.FirstOrDefault(s => s.Id == id);
         }
 
         public async Task Insert(Serie serie)
@@ -42,9 +42,9 @@ namespace DioSeries.Repositories
             await Commit();
         }
 
-        public async Task<ICollection<Serie>> List()
+        public ICollection<Serie> List()
         {
-            return _serieslist;
+            return _serieslist.Where(s => !s.Excluded).ToList();
         }
 
         public async Task Update(Guid id, Serie entity)
